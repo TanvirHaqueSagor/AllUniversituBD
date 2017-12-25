@@ -1,0 +1,2046 @@
+
+/* ------------- General ------------- */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic);
+@font-face {
+	font-family: "cs-ctrl-impress";
+	src: url("cs-ctrl-impress.eot");
+	src: url("cs-ctrl-impress.eot#iefix") format("embedded-opentype"),
+			url("cs-ctrl-impress.woff") format("woff"),
+			url("cs-ctrl-impress.ttf") format("truetype"),
+			url("cs-ctrl-impress.svg#impress") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.csslider1 {
+  display: inline-block;
+  position: relative;
+  
+  height: 360px;
+  
+
+  width: 100%;
+}
+.csslider1,
+.csslider1 *,
+.csslider1 *:after,
+.csslider1 *:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider1 > .cs_anchor {
+  display: none;
+}
+.csslider1 > ul {
+  position: relative;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
+  height: 360px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.csslider1 > ul > .cs_skeleton {
+  width: 100%;
+  visibility: hidden;
+  font-size: 0px;
+  line-height: 0;
+}
+
+.csslider1 > ul > .slide.img img {
+  width: 100%;
+}
+
+
+
+.csslider1 > ul > .slide.img a {
+  font-size: 0pt;
+  color: transparent;
+}
+.csslider1 > ul > .slide {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  font-size: initial;
+  line-height: normal;
+  white-space: normal;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.csslider1 .cs_engine{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  font-size: 0pt;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.csslider1 > ul > li.img,
+.csslider1 > .cs_arrowprev,
+.csslider1 > .cs_arrownext,
+.csslider1 > .cs_bullets,
+.csslider1 > .cs_play_pause {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* ------------- /General Styles ------------- */
+
+/* ------------- General Arrows ------------- */
+.csslider1 > .cs_arrowprev,
+.csslider1 > .cs_arrownext {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider1 > .cs_arrowprev > label,
+.csslider1 > .cs_arrownext > label {
+  position: absolute;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+}
+.csslider1 > .cs_arrowprev {
+  left: 0;
+}
+.csslider1 > .cs_arrownext {
+  right: 0;
+}
+
+.csslider1 > .slide:checked ~ .cs_arrowprev > label,
+.csslider1 > .slide:checked ~ .cs_arrownext > label {
+  opacity: 0;
+  z-index: -1;
+}
+
+
+
+.csslider1 > #cs_slide1_0:checked ~ .cs_arrowprev > label.num33,
+.csslider1 > #cs_pause1_0:checked ~ .cs_arrowprev > label.num33,
+.csslider1 > #cs_slide1_0:checked ~ .cs_arrownext > label.num1,
+.csslider1 > #cs_pause1_0:checked ~ .cs_arrownext > label.num1, 
+.csslider1 > #cs_slide1_1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_pause1_1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_slide1_1:checked ~ .cs_arrownext > label.num2,
+.csslider1 > #cs_pause1_1:checked ~ .cs_arrownext > label.num2, 
+.csslider1 > #cs_slide1_2:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_pause1_2:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_slide1_2:checked ~ .cs_arrownext > label.num3,
+.csslider1 > #cs_pause1_2:checked ~ .cs_arrownext > label.num3, 
+.csslider1 > #cs_slide1_3:checked ~ .cs_arrowprev > label.num2,
+.csslider1 > #cs_pause1_3:checked ~ .cs_arrowprev > label.num2,
+.csslider1 > #cs_slide1_3:checked ~ .cs_arrownext > label.num4,
+.csslider1 > #cs_pause1_3:checked ~ .cs_arrownext > label.num4, 
+.csslider1 > #cs_slide1_4:checked ~ .cs_arrowprev > label.num3,
+.csslider1 > #cs_pause1_4:checked ~ .cs_arrowprev > label.num3,
+.csslider1 > #cs_slide1_4:checked ~ .cs_arrownext > label.num5,
+.csslider1 > #cs_pause1_4:checked ~ .cs_arrownext > label.num5, 
+.csslider1 > #cs_slide1_5:checked ~ .cs_arrowprev > label.num4,
+.csslider1 > #cs_pause1_5:checked ~ .cs_arrowprev > label.num4,
+.csslider1 > #cs_slide1_5:checked ~ .cs_arrownext > label.num6,
+.csslider1 > #cs_pause1_5:checked ~ .cs_arrownext > label.num6, 
+.csslider1 > #cs_slide1_6:checked ~ .cs_arrowprev > label.num5,
+.csslider1 > #cs_pause1_6:checked ~ .cs_arrowprev > label.num5,
+.csslider1 > #cs_slide1_6:checked ~ .cs_arrownext > label.num7,
+.csslider1 > #cs_pause1_6:checked ~ .cs_arrownext > label.num7, 
+.csslider1 > #cs_slide1_7:checked ~ .cs_arrowprev > label.num6,
+.csslider1 > #cs_pause1_7:checked ~ .cs_arrowprev > label.num6,
+.csslider1 > #cs_slide1_7:checked ~ .cs_arrownext > label.num8,
+.csslider1 > #cs_pause1_7:checked ~ .cs_arrownext > label.num8, 
+.csslider1 > #cs_slide1_8:checked ~ .cs_arrowprev > label.num7,
+.csslider1 > #cs_pause1_8:checked ~ .cs_arrowprev > label.num7,
+.csslider1 > #cs_slide1_8:checked ~ .cs_arrownext > label.num9,
+.csslider1 > #cs_pause1_8:checked ~ .cs_arrownext > label.num9, 
+.csslider1 > #cs_slide1_9:checked ~ .cs_arrowprev > label.num8,
+.csslider1 > #cs_pause1_9:checked ~ .cs_arrowprev > label.num8,
+.csslider1 > #cs_slide1_9:checked ~ .cs_arrownext > label.num10,
+.csslider1 > #cs_pause1_9:checked ~ .cs_arrownext > label.num10, 
+.csslider1 > #cs_slide1_10:checked ~ .cs_arrowprev > label.num9,
+.csslider1 > #cs_pause1_10:checked ~ .cs_arrowprev > label.num9,
+.csslider1 > #cs_slide1_10:checked ~ .cs_arrownext > label.num11,
+.csslider1 > #cs_pause1_10:checked ~ .cs_arrownext > label.num11, 
+.csslider1 > #cs_slide1_11:checked ~ .cs_arrowprev > label.num10,
+.csslider1 > #cs_pause1_11:checked ~ .cs_arrowprev > label.num10,
+.csslider1 > #cs_slide1_11:checked ~ .cs_arrownext > label.num12,
+.csslider1 > #cs_pause1_11:checked ~ .cs_arrownext > label.num12, 
+.csslider1 > #cs_slide1_12:checked ~ .cs_arrowprev > label.num11,
+.csslider1 > #cs_pause1_12:checked ~ .cs_arrowprev > label.num11,
+.csslider1 > #cs_slide1_12:checked ~ .cs_arrownext > label.num13,
+.csslider1 > #cs_pause1_12:checked ~ .cs_arrownext > label.num13, 
+.csslider1 > #cs_slide1_13:checked ~ .cs_arrowprev > label.num12,
+.csslider1 > #cs_pause1_13:checked ~ .cs_arrowprev > label.num12,
+.csslider1 > #cs_slide1_13:checked ~ .cs_arrownext > label.num14,
+.csslider1 > #cs_pause1_13:checked ~ .cs_arrownext > label.num14, 
+.csslider1 > #cs_slide1_14:checked ~ .cs_arrowprev > label.num13,
+.csslider1 > #cs_pause1_14:checked ~ .cs_arrowprev > label.num13,
+.csslider1 > #cs_slide1_14:checked ~ .cs_arrownext > label.num15,
+.csslider1 > #cs_pause1_14:checked ~ .cs_arrownext > label.num15, 
+.csslider1 > #cs_slide1_15:checked ~ .cs_arrowprev > label.num14,
+.csslider1 > #cs_pause1_15:checked ~ .cs_arrowprev > label.num14,
+.csslider1 > #cs_slide1_15:checked ~ .cs_arrownext > label.num16,
+.csslider1 > #cs_pause1_15:checked ~ .cs_arrownext > label.num16, 
+.csslider1 > #cs_slide1_16:checked ~ .cs_arrowprev > label.num15,
+.csslider1 > #cs_pause1_16:checked ~ .cs_arrowprev > label.num15,
+.csslider1 > #cs_slide1_16:checked ~ .cs_arrownext > label.num17,
+.csslider1 > #cs_pause1_16:checked ~ .cs_arrownext > label.num17, 
+.csslider1 > #cs_slide1_17:checked ~ .cs_arrowprev > label.num16,
+.csslider1 > #cs_pause1_17:checked ~ .cs_arrowprev > label.num16,
+.csslider1 > #cs_slide1_17:checked ~ .cs_arrownext > label.num18,
+.csslider1 > #cs_pause1_17:checked ~ .cs_arrownext > label.num18, 
+.csslider1 > #cs_slide1_18:checked ~ .cs_arrowprev > label.num17,
+.csslider1 > #cs_pause1_18:checked ~ .cs_arrowprev > label.num17,
+.csslider1 > #cs_slide1_18:checked ~ .cs_arrownext > label.num19,
+.csslider1 > #cs_pause1_18:checked ~ .cs_arrownext > label.num19, 
+.csslider1 > #cs_slide1_19:checked ~ .cs_arrowprev > label.num18,
+.csslider1 > #cs_pause1_19:checked ~ .cs_arrowprev > label.num18,
+.csslider1 > #cs_slide1_19:checked ~ .cs_arrownext > label.num20,
+.csslider1 > #cs_pause1_19:checked ~ .cs_arrownext > label.num20, 
+.csslider1 > #cs_slide1_20:checked ~ .cs_arrowprev > label.num19,
+.csslider1 > #cs_pause1_20:checked ~ .cs_arrowprev > label.num19,
+.csslider1 > #cs_slide1_20:checked ~ .cs_arrownext > label.num21,
+.csslider1 > #cs_pause1_20:checked ~ .cs_arrownext > label.num21, 
+.csslider1 > #cs_slide1_21:checked ~ .cs_arrowprev > label.num20,
+.csslider1 > #cs_pause1_21:checked ~ .cs_arrowprev > label.num20,
+.csslider1 > #cs_slide1_21:checked ~ .cs_arrownext > label.num22,
+.csslider1 > #cs_pause1_21:checked ~ .cs_arrownext > label.num22, 
+.csslider1 > #cs_slide1_22:checked ~ .cs_arrowprev > label.num21,
+.csslider1 > #cs_pause1_22:checked ~ .cs_arrowprev > label.num21,
+.csslider1 > #cs_slide1_22:checked ~ .cs_arrownext > label.num23,
+.csslider1 > #cs_pause1_22:checked ~ .cs_arrownext > label.num23, 
+.csslider1 > #cs_slide1_23:checked ~ .cs_arrowprev > label.num22,
+.csslider1 > #cs_pause1_23:checked ~ .cs_arrowprev > label.num22,
+.csslider1 > #cs_slide1_23:checked ~ .cs_arrownext > label.num24,
+.csslider1 > #cs_pause1_23:checked ~ .cs_arrownext > label.num24, 
+.csslider1 > #cs_slide1_24:checked ~ .cs_arrowprev > label.num23,
+.csslider1 > #cs_pause1_24:checked ~ .cs_arrowprev > label.num23,
+.csslider1 > #cs_slide1_24:checked ~ .cs_arrownext > label.num25,
+.csslider1 > #cs_pause1_24:checked ~ .cs_arrownext > label.num25, 
+.csslider1 > #cs_slide1_25:checked ~ .cs_arrowprev > label.num24,
+.csslider1 > #cs_pause1_25:checked ~ .cs_arrowprev > label.num24,
+.csslider1 > #cs_slide1_25:checked ~ .cs_arrownext > label.num26,
+.csslider1 > #cs_pause1_25:checked ~ .cs_arrownext > label.num26, 
+.csslider1 > #cs_slide1_26:checked ~ .cs_arrowprev > label.num25,
+.csslider1 > #cs_pause1_26:checked ~ .cs_arrowprev > label.num25,
+.csslider1 > #cs_slide1_26:checked ~ .cs_arrownext > label.num27,
+.csslider1 > #cs_pause1_26:checked ~ .cs_arrownext > label.num27, 
+.csslider1 > #cs_slide1_27:checked ~ .cs_arrowprev > label.num26,
+.csslider1 > #cs_pause1_27:checked ~ .cs_arrowprev > label.num26,
+.csslider1 > #cs_slide1_27:checked ~ .cs_arrownext > label.num28,
+.csslider1 > #cs_pause1_27:checked ~ .cs_arrownext > label.num28, 
+.csslider1 > #cs_slide1_28:checked ~ .cs_arrowprev > label.num27,
+.csslider1 > #cs_pause1_28:checked ~ .cs_arrowprev > label.num27,
+.csslider1 > #cs_slide1_28:checked ~ .cs_arrownext > label.num29,
+.csslider1 > #cs_pause1_28:checked ~ .cs_arrownext > label.num29, 
+.csslider1 > #cs_slide1_29:checked ~ .cs_arrowprev > label.num28,
+.csslider1 > #cs_pause1_29:checked ~ .cs_arrowprev > label.num28,
+.csslider1 > #cs_slide1_29:checked ~ .cs_arrownext > label.num30,
+.csslider1 > #cs_pause1_29:checked ~ .cs_arrownext > label.num30, 
+.csslider1 > #cs_slide1_30:checked ~ .cs_arrowprev > label.num29,
+.csslider1 > #cs_pause1_30:checked ~ .cs_arrowprev > label.num29,
+.csslider1 > #cs_slide1_30:checked ~ .cs_arrownext > label.num31,
+.csslider1 > #cs_pause1_30:checked ~ .cs_arrownext > label.num31, 
+.csslider1 > #cs_slide1_31:checked ~ .cs_arrowprev > label.num30,
+.csslider1 > #cs_pause1_31:checked ~ .cs_arrowprev > label.num30,
+.csslider1 > #cs_slide1_31:checked ~ .cs_arrownext > label.num32,
+.csslider1 > #cs_pause1_31:checked ~ .cs_arrownext > label.num32, 
+.csslider1 > #cs_slide1_32:checked ~ .cs_arrowprev > label.num31,
+.csslider1 > #cs_pause1_32:checked ~ .cs_arrowprev > label.num31,
+.csslider1 > #cs_slide1_32:checked ~ .cs_arrownext > label.num33,
+.csslider1 > #cs_pause1_32:checked ~ .cs_arrownext > label.num33, 
+.csslider1 > #cs_slide1_33:checked ~ .cs_arrowprev > label.num32,
+.csslider1 > #cs_pause1_33:checked ~ .cs_arrowprev > label.num32,
+.csslider1 > #cs_slide1_33:checked ~ .cs_arrownext > label.num0,
+.csslider1 > #cs_pause1_33:checked ~ .cs_arrownext > label.num0 {
+  opacity: 1;
+  z-index: 5;
+}
+
+
+@-webkit-keyframes arrow {
+  0%, 2.9311764705882357% { opacity: 1; z-index: 5; }
+  2.9411764705882355%, 100%  { opacity: 0; z-index: -1; }
+}
+@keyframes arrow {
+  0%, 2.9311764705882357% { opacity: 1; z-index: 5; }
+  2.9411764705882355%, 100%  { opacity: 0; z-index: -1; }
+}
+
+
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num33,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num1 {
+  -webkit-animation: arrow 156400ms infinite -2000ms;
+  animation: arrow 156400ms infinite -2000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num2 {
+  -webkit-animation: arrow 156400ms infinite 2600ms;
+  animation: arrow 156400ms infinite 2600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num3 {
+  -webkit-animation: arrow 156400ms infinite 7200ms;
+  animation: arrow 156400ms infinite 7200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num2,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num4 {
+  -webkit-animation: arrow 156400ms infinite 11800ms;
+  animation: arrow 156400ms infinite 11800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num3,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num5 {
+  -webkit-animation: arrow 156400ms infinite 16400ms;
+  animation: arrow 156400ms infinite 16400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num4,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num6 {
+  -webkit-animation: arrow 156400ms infinite 21000ms;
+  animation: arrow 156400ms infinite 21000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num5,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num7 {
+  -webkit-animation: arrow 156400ms infinite 25600ms;
+  animation: arrow 156400ms infinite 25600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num6,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num8 {
+  -webkit-animation: arrow 156400ms infinite 30200ms;
+  animation: arrow 156400ms infinite 30200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num7,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num9 {
+  -webkit-animation: arrow 156400ms infinite 34800ms;
+  animation: arrow 156400ms infinite 34800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num8,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num10 {
+  -webkit-animation: arrow 156400ms infinite 39400ms;
+  animation: arrow 156400ms infinite 39400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num9,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num11 {
+  -webkit-animation: arrow 156400ms infinite 44000ms;
+  animation: arrow 156400ms infinite 44000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num10,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num12 {
+  -webkit-animation: arrow 156400ms infinite 48600ms;
+  animation: arrow 156400ms infinite 48600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num11,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num13 {
+  -webkit-animation: arrow 156400ms infinite 53200ms;
+  animation: arrow 156400ms infinite 53200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num12,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num14 {
+  -webkit-animation: arrow 156400ms infinite 57800ms;
+  animation: arrow 156400ms infinite 57800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num13,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num15 {
+  -webkit-animation: arrow 156400ms infinite 62400ms;
+  animation: arrow 156400ms infinite 62400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num14,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num16 {
+  -webkit-animation: arrow 156400ms infinite 67000ms;
+  animation: arrow 156400ms infinite 67000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num15,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num17 {
+  -webkit-animation: arrow 156400ms infinite 71600ms;
+  animation: arrow 156400ms infinite 71600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num16,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num18 {
+  -webkit-animation: arrow 156400ms infinite 76200ms;
+  animation: arrow 156400ms infinite 76200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num17,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num19 {
+  -webkit-animation: arrow 156400ms infinite 80800ms;
+  animation: arrow 156400ms infinite 80800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num18,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num20 {
+  -webkit-animation: arrow 156400ms infinite 85400ms;
+  animation: arrow 156400ms infinite 85400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num19,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num21 {
+  -webkit-animation: arrow 156400ms infinite 90000ms;
+  animation: arrow 156400ms infinite 90000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num20,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num22 {
+  -webkit-animation: arrow 156400ms infinite 94600ms;
+  animation: arrow 156400ms infinite 94600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num21,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num23 {
+  -webkit-animation: arrow 156400ms infinite 99200ms;
+  animation: arrow 156400ms infinite 99200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num22,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num24 {
+  -webkit-animation: arrow 156400ms infinite 103800ms;
+  animation: arrow 156400ms infinite 103800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num23,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num25 {
+  -webkit-animation: arrow 156400ms infinite 108400ms;
+  animation: arrow 156400ms infinite 108400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num24,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num26 {
+  -webkit-animation: arrow 156400ms infinite 113000ms;
+  animation: arrow 156400ms infinite 113000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num25,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num27 {
+  -webkit-animation: arrow 156400ms infinite 117600ms;
+  animation: arrow 156400ms infinite 117600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num26,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num28 {
+  -webkit-animation: arrow 156400ms infinite 122200ms;
+  animation: arrow 156400ms infinite 122200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num27,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num29 {
+  -webkit-animation: arrow 156400ms infinite 126800ms;
+  animation: arrow 156400ms infinite 126800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num28,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num30 {
+  -webkit-animation: arrow 156400ms infinite 131400ms;
+  animation: arrow 156400ms infinite 131400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num29,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num31 {
+  -webkit-animation: arrow 156400ms infinite 136000ms;
+  animation: arrow 156400ms infinite 136000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num30,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num32 {
+  -webkit-animation: arrow 156400ms infinite 140600ms;
+  animation: arrow 156400ms infinite 140600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num31,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num33 {
+  -webkit-animation: arrow 156400ms infinite 145200ms;
+  animation: arrow 156400ms infinite 145200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num32,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num0 {
+  -webkit-animation: arrow 156400ms infinite 149800ms;
+  animation: arrow 156400ms infinite 149800ms;
+}
+
+
+.csslider1 > .slide:checked ~ .cs_arrowprev > label,
+.csslider1 > .slide:checked ~ .cs_arrownext > label,
+.csslider1 > .pause:checked ~ .cs_arrowprev > label,
+.csslider1 > .pause:checked ~ .cs_arrownext > label {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+/* ------------- /General Arrows ------------- */
+
+/* ------------- General Bullets ------------- */
+.csslider1 > .cs_bullets {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  font-size: 0;
+  line-height: 8pt;
+  text-align: center;
+}
+.csslider1 > .cs_bullets > div {
+  margin-left: -50%;
+  width: 100%;
+}
+.csslider1 > .cs_bullets > label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  line-height: 0;
+  left: -64px;
+  top: -48px;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb > img {
+  max-width: none;
+}
+/* ------------- /General Bullets ------------- */
+
+/* ------------- General Description ------------- */
+.csslider1 > .cs_description {
+  z-index: 3;
+}
+.csslider1 > .cs_description a,
+.csslider1 > .cs_description a:visited,
+.csslider1 > .cs_description a:active {
+  color: inherit;
+}
+.csslider1 > .cs_description a:hover {
+  text-decoration: none;
+}
+.csslider1 > .cs_description > label {
+  position: absolute;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+  max-width: 50%;
+  left: 0;
+}
+.csslider1 > .cs_description > label > span {
+  vertical-align: top;
+}
+.csslider1 > .cs_description > label span {
+  display: inline-block;
+}
+/* ------------- /General Description ------------- */
+
+/* ------------- General Play Pause ------------- */
+.csslider1 > .cs_play_pause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+}
+.csslider1 > .cs_play_pause > label {
+  position: absolute;
+  cursor: pointer;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause,
+.csslider1 > .slide:checked ~ .cs_play_pause > .cs_play,
+.csslider1 > .pause:checked ~ .cs_play_pause > .cs_play {
+  display: block;
+  z-index: 5;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_play,
+.csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
+.csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {
+  display: none;
+  z-index: -1;
+}
+
+
+
+@-webkit-keyframes pauseChange {
+  0%, 2.9311764705882357% { opacity: 1; z-index: 5; }
+  2.9411764705882355%, 100%  { opacity: 0; z-index: -1; }
+}
+@keyframes pauseChange {
+  0%, 2.9311764705882357% { opacity: 1; z-index: 5; }
+  2.9411764705882355%, 100%  { opacity: 0; z-index: -1; }
+}
+
+
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num0 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite -2000ms;
+  animation: pauseChange 156400ms infinite -2000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num1 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 2600ms;
+  animation: pauseChange 156400ms infinite 2600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num2 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 7200ms;
+  animation: pauseChange 156400ms infinite 7200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num3 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 11800ms;
+  animation: pauseChange 156400ms infinite 11800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num4 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 16400ms;
+  animation: pauseChange 156400ms infinite 16400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num5 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 21000ms;
+  animation: pauseChange 156400ms infinite 21000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num6 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 25600ms;
+  animation: pauseChange 156400ms infinite 25600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num7 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 30200ms;
+  animation: pauseChange 156400ms infinite 30200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num8 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 34800ms;
+  animation: pauseChange 156400ms infinite 34800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num9 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 39400ms;
+  animation: pauseChange 156400ms infinite 39400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num10 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 44000ms;
+  animation: pauseChange 156400ms infinite 44000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num11 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 48600ms;
+  animation: pauseChange 156400ms infinite 48600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num12 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 53200ms;
+  animation: pauseChange 156400ms infinite 53200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num13 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 57800ms;
+  animation: pauseChange 156400ms infinite 57800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num14 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 62400ms;
+  animation: pauseChange 156400ms infinite 62400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num15 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 67000ms;
+  animation: pauseChange 156400ms infinite 67000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num16 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 71600ms;
+  animation: pauseChange 156400ms infinite 71600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num17 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 76200ms;
+  animation: pauseChange 156400ms infinite 76200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num18 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 80800ms;
+  animation: pauseChange 156400ms infinite 80800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num19 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 85400ms;
+  animation: pauseChange 156400ms infinite 85400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num20 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 90000ms;
+  animation: pauseChange 156400ms infinite 90000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num21 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 94600ms;
+  animation: pauseChange 156400ms infinite 94600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num22 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 99200ms;
+  animation: pauseChange 156400ms infinite 99200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num23 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 103800ms;
+  animation: pauseChange 156400ms infinite 103800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num24 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 108400ms;
+  animation: pauseChange 156400ms infinite 108400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num25 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 113000ms;
+  animation: pauseChange 156400ms infinite 113000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num26 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 117600ms;
+  animation: pauseChange 156400ms infinite 117600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num27 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 122200ms;
+  animation: pauseChange 156400ms infinite 122200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num28 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 126800ms;
+  animation: pauseChange 156400ms infinite 126800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num29 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 131400ms;
+  animation: pauseChange 156400ms infinite 131400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num30 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 136000ms;
+  animation: pauseChange 156400ms infinite 136000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num31 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 140600ms;
+  animation: pauseChange 156400ms infinite 140600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num32 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 145200ms;
+  animation: pauseChange 156400ms infinite 145200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num33 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange 156400ms infinite 149800ms;
+  animation: pauseChange 156400ms infinite 149800ms;
+}
+
+
+.csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
+.csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+/* ------------- /General Play Pause ------------- */
+
+/* ------------- Effect ------------- */
+.csslider1 > ul > .slide.num0 {
+  left: 0%;
+}
+.csslider1 > ul > .slide.num1 {
+  left: 100%;
+}
+.csslider1 > ul > .slide.num2 {
+  left: 200%;
+}
+.csslider1 > ul > .slide.num3 {
+  left: 300%;
+}
+.csslider1 > ul > .slide.num4 {
+  left: 400%;
+}
+.csslider1 > ul > .slide.num5 {
+  left: 500%;
+}
+.csslider1 > ul > .slide.num6 {
+  left: 600%;
+}
+.csslider1 > ul > .slide.num7 {
+  left: 700%;
+}
+.csslider1 > ul > .slide.num8 {
+  left: 800%;
+}
+.csslider1 > ul > .slide.num9 {
+  left: 900%;
+}
+.csslider1 > ul > .slide.num10 {
+  left: 1000%;
+}
+.csslider1 > ul > .slide.num11 {
+  left: 1100%;
+}
+.csslider1 > ul > .slide.num12 {
+  left: 1200%;
+}
+.csslider1 > ul > .slide.num13 {
+  left: 1300%;
+}
+.csslider1 > ul > .slide.num14 {
+  left: 1400%;
+}
+.csslider1 > ul > .slide.num15 {
+  left: 1500%;
+}
+.csslider1 > ul > .slide.num16 {
+  left: 1600%;
+}
+.csslider1 > ul > .slide.num17 {
+  left: 1700%;
+}
+.csslider1 > ul > .slide.num18 {
+  left: 1800%;
+}
+.csslider1 > ul > .slide.num19 {
+  left: 1900%;
+}
+.csslider1 > ul > .slide.num20 {
+  left: 2000%;
+}
+.csslider1 > ul > .slide.num21 {
+  left: 2100%;
+}
+.csslider1 > ul > .slide.num22 {
+  left: 2200%;
+}
+.csslider1 > ul > .slide.num23 {
+  left: 2300%;
+}
+.csslider1 > ul > .slide.num24 {
+  left: 2400%;
+}
+.csslider1 > ul > .slide.num25 {
+  left: 2500%;
+}
+.csslider1 > ul > .slide.num26 {
+  left: 2600%;
+}
+.csslider1 > ul > .slide.num27 {
+  left: 2700%;
+}
+.csslider1 > ul > .slide.num28 {
+  left: 2800%;
+}
+.csslider1 > ul > .slide.num29 {
+  left: 2900%;
+}
+.csslider1 > ul > .slide.num30 {
+  left: 3000%;
+}
+.csslider1 > ul > .slide.num31 {
+  left: 3100%;
+}
+.csslider1 > ul > .slide.num32 {
+  left: 3200%;
+}
+.csslider1 > ul > .slide.num33 {
+  left: 3300%;
+}
+ 
+
+
+.csslider1 > #cs_slide1_0:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_0:checked ~ ul > .slide {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.csslider1 > #cs_slide1_1:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_1:checked ~ ul > .slide {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.csslider1 > #cs_slide1_2:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_2:checked ~ ul > .slide {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+.csslider1 > #cs_slide1_3:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_3:checked ~ ul > .slide {
+  -webkit-transform: translateX(-300%);
+  transform: translateX(-300%);
+}
+.csslider1 > #cs_slide1_4:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_4:checked ~ ul > .slide {
+  -webkit-transform: translateX(-400%);
+  transform: translateX(-400%);
+}
+.csslider1 > #cs_slide1_5:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_5:checked ~ ul > .slide {
+  -webkit-transform: translateX(-500%);
+  transform: translateX(-500%);
+}
+.csslider1 > #cs_slide1_6:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_6:checked ~ ul > .slide {
+  -webkit-transform: translateX(-600%);
+  transform: translateX(-600%);
+}
+.csslider1 > #cs_slide1_7:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_7:checked ~ ul > .slide {
+  -webkit-transform: translateX(-700%);
+  transform: translateX(-700%);
+}
+.csslider1 > #cs_slide1_8:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_8:checked ~ ul > .slide {
+  -webkit-transform: translateX(-800%);
+  transform: translateX(-800%);
+}
+.csslider1 > #cs_slide1_9:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_9:checked ~ ul > .slide {
+  -webkit-transform: translateX(-900%);
+  transform: translateX(-900%);
+}
+.csslider1 > #cs_slide1_10:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_10:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1000%);
+  transform: translateX(-1000%);
+}
+.csslider1 > #cs_slide1_11:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_11:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1100%);
+  transform: translateX(-1100%);
+}
+.csslider1 > #cs_slide1_12:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_12:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1200%);
+  transform: translateX(-1200%);
+}
+.csslider1 > #cs_slide1_13:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_13:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1300%);
+  transform: translateX(-1300%);
+}
+.csslider1 > #cs_slide1_14:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_14:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1400%);
+  transform: translateX(-1400%);
+}
+.csslider1 > #cs_slide1_15:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_15:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1500%);
+  transform: translateX(-1500%);
+}
+.csslider1 > #cs_slide1_16:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_16:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1600%);
+  transform: translateX(-1600%);
+}
+.csslider1 > #cs_slide1_17:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_17:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1700%);
+  transform: translateX(-1700%);
+}
+.csslider1 > #cs_slide1_18:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_18:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1800%);
+  transform: translateX(-1800%);
+}
+.csslider1 > #cs_slide1_19:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_19:checked ~ ul > .slide {
+  -webkit-transform: translateX(-1900%);
+  transform: translateX(-1900%);
+}
+.csslider1 > #cs_slide1_20:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_20:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2000%);
+  transform: translateX(-2000%);
+}
+.csslider1 > #cs_slide1_21:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_21:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2100%);
+  transform: translateX(-2100%);
+}
+.csslider1 > #cs_slide1_22:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_22:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2200%);
+  transform: translateX(-2200%);
+}
+.csslider1 > #cs_slide1_23:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_23:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2300%);
+  transform: translateX(-2300%);
+}
+.csslider1 > #cs_slide1_24:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_24:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2400%);
+  transform: translateX(-2400%);
+}
+.csslider1 > #cs_slide1_25:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_25:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2500%);
+  transform: translateX(-2500%);
+}
+.csslider1 > #cs_slide1_26:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_26:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2600%);
+  transform: translateX(-2600%);
+}
+.csslider1 > #cs_slide1_27:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_27:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2700%);
+  transform: translateX(-2700%);
+}
+.csslider1 > #cs_slide1_28:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_28:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2800%);
+  transform: translateX(-2800%);
+}
+.csslider1 > #cs_slide1_29:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_29:checked ~ ul > .slide {
+  -webkit-transform: translateX(-2900%);
+  transform: translateX(-2900%);
+}
+.csslider1 > #cs_slide1_30:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_30:checked ~ ul > .slide {
+  -webkit-transform: translateX(-3000%);
+  transform: translateX(-3000%);
+}
+.csslider1 > #cs_slide1_31:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_31:checked ~ ul > .slide {
+  -webkit-transform: translateX(-3100%);
+  transform: translateX(-3100%);
+}
+.csslider1 > #cs_slide1_32:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_32:checked ~ ul > .slide {
+  -webkit-transform: translateX(-3200%);
+  transform: translateX(-3200%);
+}
+.csslider1 > #cs_slide1_33:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_33:checked ~ ul > .slide {
+  -webkit-transform: translateX(-3300%);
+  transform: translateX(-3300%);
+}
+ 
+
+
+.csslider1 > ul > .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  opacity: 1;
+
+  -webkit-transition: -webkit-transform 2000ms;
+  transition: -webkit-transform 2000ms, transform 2000ms;
+
+  
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+
+@-webkit-keyframes slide1 {
+  0%, 1.6624040920716114%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  2.9411764705882355%, 4.603580562659847%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  5.882352941176471%, 7.544757033248082%  { -webkit-transform: translateX(-200%); transform: translateX(-200%); }
+  8.823529411764707%, 10.485933503836318%  { -webkit-transform: translateX(-300%); transform: translateX(-300%); }
+  11.764705882352942%, 13.427109974424553%  { -webkit-transform: translateX(-400%); transform: translateX(-400%); }
+  14.705882352941178%, 16.36828644501279%  { -webkit-transform: translateX(-500%); transform: translateX(-500%); }
+  17.647058823529413%, 19.309462915601024%  { -webkit-transform: translateX(-600%); transform: translateX(-600%); }
+  20.58823529411765%, 22.25063938618926%  { -webkit-transform: translateX(-700%); transform: translateX(-700%); }
+  23.529411764705884%, 25.191815856777495%  { -webkit-transform: translateX(-800%); transform: translateX(-800%); }
+  26.47058823529412%, 28.13299232736573%  { -webkit-transform: translateX(-900%); transform: translateX(-900%); }
+  29.411764705882355%, 31.07416879795397%  { -webkit-transform: translateX(-1000%); transform: translateX(-1000%); }
+  32.352941176470594%, 34.015345268542205%  { -webkit-transform: translateX(-1100%); transform: translateX(-1100%); }
+  35.294117647058826%, 36.95652173913044%  { -webkit-transform: translateX(-1200%); transform: translateX(-1200%); }
+  38.23529411764706%, 39.897698209718676%  { -webkit-transform: translateX(-1300%); transform: translateX(-1300%); }
+  41.1764705882353%, 42.838874680306915%  { -webkit-transform: translateX(-1400%); transform: translateX(-1400%); }
+  44.117647058823536%, 45.78005115089515%  { -webkit-transform: translateX(-1500%); transform: translateX(-1500%); }
+  47.05882352941177%, 48.72122762148338%  { -webkit-transform: translateX(-1600%); transform: translateX(-1600%); }
+  50%, 51.66240409207162%  { -webkit-transform: translateX(-1700%); transform: translateX(-1700%); }
+  52.94117647058824%, 54.60358056265986%  { -webkit-transform: translateX(-1800%); transform: translateX(-1800%); }
+  55.88235294117648%, 57.54475703324809%  { -webkit-transform: translateX(-1900%); transform: translateX(-1900%); }
+  58.82352941176471%, 60.48593350383632%  { -webkit-transform: translateX(-2000%); transform: translateX(-2000%); }
+  61.76470588235294%, 63.42710997442457%  { -webkit-transform: translateX(-2100%); transform: translateX(-2100%); }
+  64.70588235294119%, 66.3682864450128%  { -webkit-transform: translateX(-2200%); transform: translateX(-2200%); }
+  67.64705882352942%, 69.30946291560103%  { -webkit-transform: translateX(-2300%); transform: translateX(-2300%); }
+  70.58823529411765%, 72.25063938618926%  { -webkit-transform: translateX(-2400%); transform: translateX(-2400%); }
+  73.52941176470588%, 75.1918158567775%  { -webkit-transform: translateX(-2500%); transform: translateX(-2500%); }
+  76.47058823529412%, 78.13299232736574%  { -webkit-transform: translateX(-2600%); transform: translateX(-2600%); }
+  79.41176470588236%, 81.07416879795397%  { -webkit-transform: translateX(-2700%); transform: translateX(-2700%); }
+  82.3529411764706%, 84.0153452685422%  { -webkit-transform: translateX(-2800%); transform: translateX(-2800%); }
+  85.29411764705883%, 86.95652173913045%  { -webkit-transform: translateX(-2900%); transform: translateX(-2900%); }
+  88.23529411764707%, 89.89769820971868%  { -webkit-transform: translateX(-3000%); transform: translateX(-3000%); }
+  91.1764705882353%, 92.83887468030692%  { -webkit-transform: translateX(-3100%); transform: translateX(-3100%); }
+  94.11764705882354%, 95.78005115089515%  { -webkit-transform: translateX(-3200%); transform: translateX(-3200%); }
+  97.05882352941177%, 98.72122762148338%  { -webkit-transform: translateX(-3300%); transform: translateX(-3300%); }
+  
+}
+@keyframes slide1 {
+  0%, 1.6624040920716114%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  2.9411764705882355%, 4.603580562659847%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  5.882352941176471%, 7.544757033248082%  { -webkit-transform: translateX(-200%); transform: translateX(-200%); }
+  8.823529411764707%, 10.485933503836318%  { -webkit-transform: translateX(-300%); transform: translateX(-300%); }
+  11.764705882352942%, 13.427109974424553%  { -webkit-transform: translateX(-400%); transform: translateX(-400%); }
+  14.705882352941178%, 16.36828644501279%  { -webkit-transform: translateX(-500%); transform: translateX(-500%); }
+  17.647058823529413%, 19.309462915601024%  { -webkit-transform: translateX(-600%); transform: translateX(-600%); }
+  20.58823529411765%, 22.25063938618926%  { -webkit-transform: translateX(-700%); transform: translateX(-700%); }
+  23.529411764705884%, 25.191815856777495%  { -webkit-transform: translateX(-800%); transform: translateX(-800%); }
+  26.47058823529412%, 28.13299232736573%  { -webkit-transform: translateX(-900%); transform: translateX(-900%); }
+  29.411764705882355%, 31.07416879795397%  { -webkit-transform: translateX(-1000%); transform: translateX(-1000%); }
+  32.352941176470594%, 34.015345268542205%  { -webkit-transform: translateX(-1100%); transform: translateX(-1100%); }
+  35.294117647058826%, 36.95652173913044%  { -webkit-transform: translateX(-1200%); transform: translateX(-1200%); }
+  38.23529411764706%, 39.897698209718676%  { -webkit-transform: translateX(-1300%); transform: translateX(-1300%); }
+  41.1764705882353%, 42.838874680306915%  { -webkit-transform: translateX(-1400%); transform: translateX(-1400%); }
+  44.117647058823536%, 45.78005115089515%  { -webkit-transform: translateX(-1500%); transform: translateX(-1500%); }
+  47.05882352941177%, 48.72122762148338%  { -webkit-transform: translateX(-1600%); transform: translateX(-1600%); }
+  50%, 51.66240409207162%  { -webkit-transform: translateX(-1700%); transform: translateX(-1700%); }
+  52.94117647058824%, 54.60358056265986%  { -webkit-transform: translateX(-1800%); transform: translateX(-1800%); }
+  55.88235294117648%, 57.54475703324809%  { -webkit-transform: translateX(-1900%); transform: translateX(-1900%); }
+  58.82352941176471%, 60.48593350383632%  { -webkit-transform: translateX(-2000%); transform: translateX(-2000%); }
+  61.76470588235294%, 63.42710997442457%  { -webkit-transform: translateX(-2100%); transform: translateX(-2100%); }
+  64.70588235294119%, 66.3682864450128%  { -webkit-transform: translateX(-2200%); transform: translateX(-2200%); }
+  67.64705882352942%, 69.30946291560103%  { -webkit-transform: translateX(-2300%); transform: translateX(-2300%); }
+  70.58823529411765%, 72.25063938618926%  { -webkit-transform: translateX(-2400%); transform: translateX(-2400%); }
+  73.52941176470588%, 75.1918158567775%  { -webkit-transform: translateX(-2500%); transform: translateX(-2500%); }
+  76.47058823529412%, 78.13299232736574%  { -webkit-transform: translateX(-2600%); transform: translateX(-2600%); }
+  79.41176470588236%, 81.07416879795397%  { -webkit-transform: translateX(-2700%); transform: translateX(-2700%); }
+  82.3529411764706%, 84.0153452685422%  { -webkit-transform: translateX(-2800%); transform: translateX(-2800%); }
+  85.29411764705883%, 86.95652173913045%  { -webkit-transform: translateX(-2900%); transform: translateX(-2900%); }
+  88.23529411764707%, 89.89769820971868%  { -webkit-transform: translateX(-3000%); transform: translateX(-3000%); }
+  91.1764705882353%, 92.83887468030692%  { -webkit-transform: translateX(-3100%); transform: translateX(-3100%); }
+  94.11764705882354%, 95.78005115089515%  { -webkit-transform: translateX(-3200%); transform: translateX(-3200%); }
+  97.05882352941177%, 98.72122762148338%  { -webkit-transform: translateX(-3300%); transform: translateX(-3300%); }
+  
+}
+
+@-webkit-keyframes slide1-ie {
+  0%, 1.6624040920716114%  { margin-left: 0%; }
+  2.9411764705882355%, 4.603580562659847%  { margin-left: -100%; }
+  5.882352941176471%, 7.544757033248082%  { margin-left: -200%; }
+  8.823529411764707%, 10.485933503836318%  { margin-left: -300%; }
+  11.764705882352942%, 13.427109974424553%  { margin-left: -400%; }
+  14.705882352941178%, 16.36828644501279%  { margin-left: -500%; }
+  17.647058823529413%, 19.309462915601024%  { margin-left: -600%; }
+  20.58823529411765%, 22.25063938618926%  { margin-left: -700%; }
+  23.529411764705884%, 25.191815856777495%  { margin-left: -800%; }
+  26.47058823529412%, 28.13299232736573%  { margin-left: -900%; }
+  29.411764705882355%, 31.07416879795397%  { margin-left: -1000%; }
+  32.352941176470594%, 34.015345268542205%  { margin-left: -1100%; }
+  35.294117647058826%, 36.95652173913044%  { margin-left: -1200%; }
+  38.23529411764706%, 39.897698209718676%  { margin-left: -1300%; }
+  41.1764705882353%, 42.838874680306915%  { margin-left: -1400%; }
+  44.117647058823536%, 45.78005115089515%  { margin-left: -1500%; }
+  47.05882352941177%, 48.72122762148338%  { margin-left: -1600%; }
+  50%, 51.66240409207162%  { margin-left: -1700%; }
+  52.94117647058824%, 54.60358056265986%  { margin-left: -1800%; }
+  55.88235294117648%, 57.54475703324809%  { margin-left: -1900%; }
+  58.82352941176471%, 60.48593350383632%  { margin-left: -2000%; }
+  61.76470588235294%, 63.42710997442457%  { margin-left: -2100%; }
+  64.70588235294119%, 66.3682864450128%  { margin-left: -2200%; }
+  67.64705882352942%, 69.30946291560103%  { margin-left: -2300%; }
+  70.58823529411765%, 72.25063938618926%  { margin-left: -2400%; }
+  73.52941176470588%, 75.1918158567775%  { margin-left: -2500%; }
+  76.47058823529412%, 78.13299232736574%  { margin-left: -2600%; }
+  79.41176470588236%, 81.07416879795397%  { margin-left: -2700%; }
+  82.3529411764706%, 84.0153452685422%  { margin-left: -2800%; }
+  85.29411764705883%, 86.95652173913045%  { margin-left: -2900%; }
+  88.23529411764707%, 89.89769820971868%  { margin-left: -3000%; }
+  91.1764705882353%, 92.83887468030692%  { margin-left: -3100%; }
+  94.11764705882354%, 95.78005115089515%  { margin-left: -3200%; }
+  97.05882352941177%, 98.72122762148338%  { margin-left: -3300%; }
+  
+}
+@keyframes slide1-ie {
+  0%, 1.6624040920716114%  { margin-left: 0%; }
+  2.9411764705882355%, 4.603580562659847%  { margin-left: -100%; }
+  5.882352941176471%, 7.544757033248082%  { margin-left: -200%; }
+  8.823529411764707%, 10.485933503836318%  { margin-left: -300%; }
+  11.764705882352942%, 13.427109974424553%  { margin-left: -400%; }
+  14.705882352941178%, 16.36828644501279%  { margin-left: -500%; }
+  17.647058823529413%, 19.309462915601024%  { margin-left: -600%; }
+  20.58823529411765%, 22.25063938618926%  { margin-left: -700%; }
+  23.529411764705884%, 25.191815856777495%  { margin-left: -800%; }
+  26.47058823529412%, 28.13299232736573%  { margin-left: -900%; }
+  29.411764705882355%, 31.07416879795397%  { margin-left: -1000%; }
+  32.352941176470594%, 34.015345268542205%  { margin-left: -1100%; }
+  35.294117647058826%, 36.95652173913044%  { margin-left: -1200%; }
+  38.23529411764706%, 39.897698209718676%  { margin-left: -1300%; }
+  41.1764705882353%, 42.838874680306915%  { margin-left: -1400%; }
+  44.117647058823536%, 45.78005115089515%  { margin-left: -1500%; }
+  47.05882352941177%, 48.72122762148338%  { margin-left: -1600%; }
+  50%, 51.66240409207162%  { margin-left: -1700%; }
+  52.94117647058824%, 54.60358056265986%  { margin-left: -1800%; }
+  55.88235294117648%, 57.54475703324809%  { margin-left: -1900%; }
+  58.82352941176471%, 60.48593350383632%  { margin-left: -2000%; }
+  61.76470588235294%, 63.42710997442457%  { margin-left: -2100%; }
+  64.70588235294119%, 66.3682864450128%  { margin-left: -2200%; }
+  67.64705882352942%, 69.30946291560103%  { margin-left: -2300%; }
+  70.58823529411765%, 72.25063938618926%  { margin-left: -2400%; }
+  73.52941176470588%, 75.1918158567775%  { margin-left: -2500%; }
+  76.47058823529412%, 78.13299232736574%  { margin-left: -2600%; }
+  79.41176470588236%, 81.07416879795397%  { margin-left: -2700%; }
+  82.3529411764706%, 84.0153452685422%  { margin-left: -2800%; }
+  85.29411764705883%, 86.95652173913045%  { margin-left: -2900%; }
+  88.23529411764707%, 89.89769820971868%  { margin-left: -3000%; }
+  91.1764705882353%, 92.83887468030692%  { margin-left: -3100%; }
+  94.11764705882354%, 95.78005115089515%  { margin-left: -3200%; }
+  97.05882352941177%, 98.72122762148338%  { margin-left: -3300%; }
+  
+}
+
+.csslider1  > #cs_play1:checked ~ ul > .slide {
+  
+  -webkit-animation: slide1 156400ms infinite;
+  animation: slide1 156400ms infinite;
+  
+}
+/* IE 10+ hack - cant animate translate :( */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .csslider1  > #cs_play1:checked ~ ul > .slide {
+    animation: slide1-ie 156400ms infinite;
+  }
+}
+
+
+.csslider1 > #cs_play1:checked ~ ul > .slide,
+.csslider1 > .pause:checked ~ ul > .slide {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+/* ------------- /Effect ------------- */
+
+.csslider1 {
+  box-shadow: 0 0 0 5px #3665A0;
+  margin-top: 15px;
+}
+
+
+/* ------------- Template Show on hover ------------- */
+.csslider1 > .cs_play_pause {
+  -webkit-transition: .4s all 0s ease;
+  transition: .4s all 0s ease;
+}
+.csslider1 > .cs_arrowprev {
+  -webkit-transition: .4s all .15s ease;
+  transition: .4s all .15s ease;
+}
+.csslider1 > .cs_arrownext {
+  -webkit-transition: .4s all .3s ease;
+  transition: .4s all .3s ease;
+}
+.csslider1 > .cs_arrowprev,
+.csslider1 > .cs_arrownext,
+.csslider1 > .cs_play_pause {
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.csslider1:hover > .cs_arrowprev,
+.csslider1:hover > .cs_arrownext,
+.csslider1:hover > .cs_play_pause {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/* ------------- /Template Show on hover ------------- */
+
+/* ------------- Template Arrows ------------- */
+.csslider1 > .cs_arrowprev > label,
+.csslider1 > .cs_arrownext > label {
+  margin-top: -30px; 
+  margin-left: -30px; 
+  width: 60px;
+  height: 60px;
+  box-shadow: inset 0 0 0 2px #fff;
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.csslider1 > .cs_arrowprev {
+  margin-left: 10px;
+  left: 30px;
+}
+.csslider1 > .cs_arrownext {
+  margin-right: 10px;
+  right: 30px;
+}
+.csslider1 > .cs_arrowprev > label:after {
+  content: '\e800';
+  margin-left: -4px;
+}
+.csslider1 > .cs_arrownext > label:after {
+  content: '\e801';
+  margin-left: 4px;
+}
+.csslider1 > .cs_arrowprev > label:after,
+.csslider1 > .cs_arrownext > label:after {
+  position: absolute;
+  display: block;
+  text-align: center;
+  font: 31px "cs-ctrl-impress";
+  line-height: 64px;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+/* IE10+ hack */
+_:-ms-input-placeholder, :root .csslider1 > .cs_arrowprev > label:after {
+  line-height: 70px;
+}
+_:-ms-input-placeholder, :root .csslider1 > .cs_arrownext > label:after {
+  line-height: 70px;
+}
+
+.csslider1 > .cs_arrowprev:hover > label,
+.csslider1 > .cs_arrownext:hover > label {
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0);
+}
+
+
+.csslider1 > .cs_arrowprev > label > span,
+.csslider1 > .cs_arrownext > label > span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: -1;
+}
+.csslider1 > .cs_arrowprev > label i,
+.csslider1 > .cs_arrownext > label i {
+  display: block;
+  width: 60px;
+  height: 0px;
+  background-color: #3665A0;
+
+  -webkit-transition: height .5s ease;
+  transition: height .5s ease;
+}
+.csslider1 > .cs_arrowprev:hover > label i,
+.csslider1 > .cs_arrownext:hover > label i {
+  height: 60px;
+}
+/* ------------- /Template Arrows ------------- */
+
+/* ------------- Template Play Pause ------------- */
+.csslider1 > .cs_play_pause > label {
+  text-decoration: none;
+  margin-left: -30px;
+  margin-top: -30px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+  box-shadow: inset 0 0 0 2px #fff;
+
+  -webkit-transition: box-shadow .5s ease;
+  transition: box-shadow .5s ease;
+}
+
+.csslider1 > .cs_play_pause > .cs_play:after {
+  content: '\e802';
+}
+.csslider1 > .cs_play_pause > .cs_pause:after {
+  content: '\e803';
+}
+.csslider1 > .cs_play_pause > label:after{
+  position: absolute;
+  display: block;
+  text-align: center;
+  font: 28px "cs-ctrl-impress";
+  line-height: 64px;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+/* IE10+ hack */
+_:-ms-input-placeholder, :root .csslider1 > .cs_play_pause > label:after {
+  line-height: 72px;
+}
+
+.csslider1 > .cs_play_pause:hover > label {
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0);
+}
+
+
+
+.csslider1 > .cs_play_pause > label > span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: -1;
+}
+.csslider1 > .cs_play_pause > label i {
+  display: block;
+  width: 60px;
+  height: 0px;
+  background-color: #3665A0;
+
+  -webkit-transition: height .5s ease;
+  transition: height .5s ease;
+}
+.csslider1 > .cs_play_pause:hover > label i {
+  height: 60px;
+}
+/* ------------- /Template Play Pause ------------- */
+
+/* ------------- Template Bullets ------------- */
+.csslider1 > .cs_bullets {
+  bottom: 5px;
+  margin-bottom: 5px;
+}
+.csslider1 > .cs_bullets > label {
+  margin: 0 10px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.csslider1 > .cs_bullets > label img {
+  border: 3px solid #3665A0;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb {
+  overflow: hidden;
+  height: 0px;
+  opacity: 1;
+  margin-top: -15px;
+  margin-left: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb:before {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  left: 50%;
+  top: 54px;
+  margin-left: -4px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  
+  border-top: 7px solid #3665A0;
+}
+.csslider1 > .cs_bullets > label:hover > .cs_thumb {
+  height: 61px;
+  visibility: visible;
+}
+
+
+
+
+
+
+.csslider1 > .cs_bullets > label:hover,
+
+.csslider1 > #cs_slide1_0:checked ~ .cs_bullets > label.num0,
+.csslider1 > #cs_pause1_0:checked ~ .cs_bullets > label.num0,
+.csslider1 > #cs_slide1_1:checked ~ .cs_bullets > label.num1,
+.csslider1 > #cs_pause1_1:checked ~ .cs_bullets > label.num1,
+.csslider1 > #cs_slide1_2:checked ~ .cs_bullets > label.num2,
+.csslider1 > #cs_pause1_2:checked ~ .cs_bullets > label.num2,
+.csslider1 > #cs_slide1_3:checked ~ .cs_bullets > label.num3,
+.csslider1 > #cs_pause1_3:checked ~ .cs_bullets > label.num3,
+.csslider1 > #cs_slide1_4:checked ~ .cs_bullets > label.num4,
+.csslider1 > #cs_pause1_4:checked ~ .cs_bullets > label.num4,
+.csslider1 > #cs_slide1_5:checked ~ .cs_bullets > label.num5,
+.csslider1 > #cs_pause1_5:checked ~ .cs_bullets > label.num5,
+.csslider1 > #cs_slide1_6:checked ~ .cs_bullets > label.num6,
+.csslider1 > #cs_pause1_6:checked ~ .cs_bullets > label.num6,
+.csslider1 > #cs_slide1_7:checked ~ .cs_bullets > label.num7,
+.csslider1 > #cs_pause1_7:checked ~ .cs_bullets > label.num7,
+.csslider1 > #cs_slide1_8:checked ~ .cs_bullets > label.num8,
+.csslider1 > #cs_pause1_8:checked ~ .cs_bullets > label.num8,
+.csslider1 > #cs_slide1_9:checked ~ .cs_bullets > label.num9,
+.csslider1 > #cs_pause1_9:checked ~ .cs_bullets > label.num9,
+.csslider1 > #cs_slide1_10:checked ~ .cs_bullets > label.num10,
+.csslider1 > #cs_pause1_10:checked ~ .cs_bullets > label.num10,
+.csslider1 > #cs_slide1_11:checked ~ .cs_bullets > label.num11,
+.csslider1 > #cs_pause1_11:checked ~ .cs_bullets > label.num11,
+.csslider1 > #cs_slide1_12:checked ~ .cs_bullets > label.num12,
+.csslider1 > #cs_pause1_12:checked ~ .cs_bullets > label.num12,
+.csslider1 > #cs_slide1_13:checked ~ .cs_bullets > label.num13,
+.csslider1 > #cs_pause1_13:checked ~ .cs_bullets > label.num13,
+.csslider1 > #cs_slide1_14:checked ~ .cs_bullets > label.num14,
+.csslider1 > #cs_pause1_14:checked ~ .cs_bullets > label.num14,
+.csslider1 > #cs_slide1_15:checked ~ .cs_bullets > label.num15,
+.csslider1 > #cs_pause1_15:checked ~ .cs_bullets > label.num15,
+.csslider1 > #cs_slide1_16:checked ~ .cs_bullets > label.num16,
+.csslider1 > #cs_pause1_16:checked ~ .cs_bullets > label.num16,
+.csslider1 > #cs_slide1_17:checked ~ .cs_bullets > label.num17,
+.csslider1 > #cs_pause1_17:checked ~ .cs_bullets > label.num17,
+.csslider1 > #cs_slide1_18:checked ~ .cs_bullets > label.num18,
+.csslider1 > #cs_pause1_18:checked ~ .cs_bullets > label.num18,
+.csslider1 > #cs_slide1_19:checked ~ .cs_bullets > label.num19,
+.csslider1 > #cs_pause1_19:checked ~ .cs_bullets > label.num19,
+.csslider1 > #cs_slide1_20:checked ~ .cs_bullets > label.num20,
+.csslider1 > #cs_pause1_20:checked ~ .cs_bullets > label.num20,
+.csslider1 > #cs_slide1_21:checked ~ .cs_bullets > label.num21,
+.csslider1 > #cs_pause1_21:checked ~ .cs_bullets > label.num21,
+.csslider1 > #cs_slide1_22:checked ~ .cs_bullets > label.num22,
+.csslider1 > #cs_pause1_22:checked ~ .cs_bullets > label.num22,
+.csslider1 > #cs_slide1_23:checked ~ .cs_bullets > label.num23,
+.csslider1 > #cs_pause1_23:checked ~ .cs_bullets > label.num23,
+.csslider1 > #cs_slide1_24:checked ~ .cs_bullets > label.num24,
+.csslider1 > #cs_pause1_24:checked ~ .cs_bullets > label.num24,
+.csslider1 > #cs_slide1_25:checked ~ .cs_bullets > label.num25,
+.csslider1 > #cs_pause1_25:checked ~ .cs_bullets > label.num25,
+.csslider1 > #cs_slide1_26:checked ~ .cs_bullets > label.num26,
+.csslider1 > #cs_pause1_26:checked ~ .cs_bullets > label.num26,
+.csslider1 > #cs_slide1_27:checked ~ .cs_bullets > label.num27,
+.csslider1 > #cs_pause1_27:checked ~ .cs_bullets > label.num27,
+.csslider1 > #cs_slide1_28:checked ~ .cs_bullets > label.num28,
+.csslider1 > #cs_pause1_28:checked ~ .cs_bullets > label.num28,
+.csslider1 > #cs_slide1_29:checked ~ .cs_bullets > label.num29,
+.csslider1 > #cs_pause1_29:checked ~ .cs_bullets > label.num29,
+.csslider1 > #cs_slide1_30:checked ~ .cs_bullets > label.num30,
+.csslider1 > #cs_pause1_30:checked ~ .cs_bullets > label.num30,
+.csslider1 > #cs_slide1_31:checked ~ .cs_bullets > label.num31,
+.csslider1 > #cs_pause1_31:checked ~ .cs_bullets > label.num31,
+.csslider1 > #cs_slide1_32:checked ~ .cs_bullets > label.num32,
+.csslider1 > #cs_pause1_32:checked ~ .cs_bullets > label.num32,
+.csslider1 > #cs_slide1_33:checked ~ .cs_bullets > label.num33,
+.csslider1 > #cs_pause1_33:checked ~ .cs_bullets > label.num33 {
+  border: 2px solid rgba(255,255,255,0);
+  background: #3665A0;
+}
+
+
+
+@-webkit-keyframes bullet {
+  0%, 2.9311764705882357%  { border: 2px solid rgba(255,255,255,0); background: #3665A0; }
+  2.9411764705882355%, 100% { border: 2px solid #fff; background: transparent; }
+}
+@keyframes bullet {
+  0%, 2.9311764705882357%  { border: 2px solid rgba(255,255,255,0); background: #3665A0; }
+  2.9411764705882355%, 100% { border: 2px solid #fff; background: transparent; }
+}
+
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num0 {
+  -webkit-animation: bullet 156400ms infinite -2000ms;
+  animation: bullet 156400ms infinite -2000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num1 {
+  -webkit-animation: bullet 156400ms infinite 2600ms;
+  animation: bullet 156400ms infinite 2600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num2 {
+  -webkit-animation: bullet 156400ms infinite 7200ms;
+  animation: bullet 156400ms infinite 7200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num3 {
+  -webkit-animation: bullet 156400ms infinite 11800ms;
+  animation: bullet 156400ms infinite 11800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num4 {
+  -webkit-animation: bullet 156400ms infinite 16400ms;
+  animation: bullet 156400ms infinite 16400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num5 {
+  -webkit-animation: bullet 156400ms infinite 21000ms;
+  animation: bullet 156400ms infinite 21000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num6 {
+  -webkit-animation: bullet 156400ms infinite 25600ms;
+  animation: bullet 156400ms infinite 25600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num7 {
+  -webkit-animation: bullet 156400ms infinite 30200ms;
+  animation: bullet 156400ms infinite 30200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num8 {
+  -webkit-animation: bullet 156400ms infinite 34800ms;
+  animation: bullet 156400ms infinite 34800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num9 {
+  -webkit-animation: bullet 156400ms infinite 39400ms;
+  animation: bullet 156400ms infinite 39400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num10 {
+  -webkit-animation: bullet 156400ms infinite 44000ms;
+  animation: bullet 156400ms infinite 44000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num11 {
+  -webkit-animation: bullet 156400ms infinite 48600ms;
+  animation: bullet 156400ms infinite 48600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num12 {
+  -webkit-animation: bullet 156400ms infinite 53200ms;
+  animation: bullet 156400ms infinite 53200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num13 {
+  -webkit-animation: bullet 156400ms infinite 57800ms;
+  animation: bullet 156400ms infinite 57800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num14 {
+  -webkit-animation: bullet 156400ms infinite 62400ms;
+  animation: bullet 156400ms infinite 62400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num15 {
+  -webkit-animation: bullet 156400ms infinite 67000ms;
+  animation: bullet 156400ms infinite 67000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num16 {
+  -webkit-animation: bullet 156400ms infinite 71600ms;
+  animation: bullet 156400ms infinite 71600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num17 {
+  -webkit-animation: bullet 156400ms infinite 76200ms;
+  animation: bullet 156400ms infinite 76200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num18 {
+  -webkit-animation: bullet 156400ms infinite 80800ms;
+  animation: bullet 156400ms infinite 80800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num19 {
+  -webkit-animation: bullet 156400ms infinite 85400ms;
+  animation: bullet 156400ms infinite 85400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num20 {
+  -webkit-animation: bullet 156400ms infinite 90000ms;
+  animation: bullet 156400ms infinite 90000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num21 {
+  -webkit-animation: bullet 156400ms infinite 94600ms;
+  animation: bullet 156400ms infinite 94600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num22 {
+  -webkit-animation: bullet 156400ms infinite 99200ms;
+  animation: bullet 156400ms infinite 99200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num23 {
+  -webkit-animation: bullet 156400ms infinite 103800ms;
+  animation: bullet 156400ms infinite 103800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num24 {
+  -webkit-animation: bullet 156400ms infinite 108400ms;
+  animation: bullet 156400ms infinite 108400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num25 {
+  -webkit-animation: bullet 156400ms infinite 113000ms;
+  animation: bullet 156400ms infinite 113000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num26 {
+  -webkit-animation: bullet 156400ms infinite 117600ms;
+  animation: bullet 156400ms infinite 117600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num27 {
+  -webkit-animation: bullet 156400ms infinite 122200ms;
+  animation: bullet 156400ms infinite 122200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num28 {
+  -webkit-animation: bullet 156400ms infinite 126800ms;
+  animation: bullet 156400ms infinite 126800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num29 {
+  -webkit-animation: bullet 156400ms infinite 131400ms;
+  animation: bullet 156400ms infinite 131400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num30 {
+  -webkit-animation: bullet 156400ms infinite 136000ms;
+  animation: bullet 156400ms infinite 136000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num31 {
+  -webkit-animation: bullet 156400ms infinite 140600ms;
+  animation: bullet 156400ms infinite 140600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num32 {
+  -webkit-animation: bullet 156400ms infinite 145200ms;
+  animation: bullet 156400ms infinite 145200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num33 {
+  -webkit-animation: bullet 156400ms infinite 149800ms;
+  animation: bullet 156400ms infinite 149800ms;
+}
+
+
+
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label,
+.csslider1 > .pause:checked ~ .cs_bullets > label {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+.csslider1 > .slide:checked ~ .cs_bullets > label {
+  -webkit-animation: none;
+  animation: none;
+}
+
+/* ------------- /Template Bullets ------------- */
+
+/* ------------- Template Description ------------- */
+.csslider1 > .cs_description > label {
+  font-family: "Ubuntu",sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  bottom: 40px;
+  top: auto;
+}
+.csslider1 > .cs_description > label > span {
+  color: #fff;
+  margin: 5px 10px;
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+}
+
+.csslider1 > .cs_description > label > .cs_descr {
+  text-align: left;
+  
+}
+
+
+
+.csslider1 > #cs_slide1_0:checked ~ .cs_description > .num0,
+.csslider1 > #cs_pause1_0:checked ~ .cs_description > .num0,
+.csslider1 > #cs_slide1_1:checked ~ .cs_description > .num1,
+.csslider1 > #cs_pause1_1:checked ~ .cs_description > .num1,
+.csslider1 > #cs_slide1_2:checked ~ .cs_description > .num2,
+.csslider1 > #cs_pause1_2:checked ~ .cs_description > .num2,
+.csslider1 > #cs_slide1_3:checked ~ .cs_description > .num3,
+.csslider1 > #cs_pause1_3:checked ~ .cs_description > .num3,
+.csslider1 > #cs_slide1_4:checked ~ .cs_description > .num4,
+.csslider1 > #cs_pause1_4:checked ~ .cs_description > .num4,
+.csslider1 > #cs_slide1_5:checked ~ .cs_description > .num5,
+.csslider1 > #cs_pause1_5:checked ~ .cs_description > .num5,
+.csslider1 > #cs_slide1_6:checked ~ .cs_description > .num6,
+.csslider1 > #cs_pause1_6:checked ~ .cs_description > .num6,
+.csslider1 > #cs_slide1_7:checked ~ .cs_description > .num7,
+.csslider1 > #cs_pause1_7:checked ~ .cs_description > .num7,
+.csslider1 > #cs_slide1_8:checked ~ .cs_description > .num8,
+.csslider1 > #cs_pause1_8:checked ~ .cs_description > .num8,
+.csslider1 > #cs_slide1_9:checked ~ .cs_description > .num9,
+.csslider1 > #cs_pause1_9:checked ~ .cs_description > .num9,
+.csslider1 > #cs_slide1_10:checked ~ .cs_description > .num10,
+.csslider1 > #cs_pause1_10:checked ~ .cs_description > .num10,
+.csslider1 > #cs_slide1_11:checked ~ .cs_description > .num11,
+.csslider1 > #cs_pause1_11:checked ~ .cs_description > .num11,
+.csslider1 > #cs_slide1_12:checked ~ .cs_description > .num12,
+.csslider1 > #cs_pause1_12:checked ~ .cs_description > .num12,
+.csslider1 > #cs_slide1_13:checked ~ .cs_description > .num13,
+.csslider1 > #cs_pause1_13:checked ~ .cs_description > .num13,
+.csslider1 > #cs_slide1_14:checked ~ .cs_description > .num14,
+.csslider1 > #cs_pause1_14:checked ~ .cs_description > .num14,
+.csslider1 > #cs_slide1_15:checked ~ .cs_description > .num15,
+.csslider1 > #cs_pause1_15:checked ~ .cs_description > .num15,
+.csslider1 > #cs_slide1_16:checked ~ .cs_description > .num16,
+.csslider1 > #cs_pause1_16:checked ~ .cs_description > .num16,
+.csslider1 > #cs_slide1_17:checked ~ .cs_description > .num17,
+.csslider1 > #cs_pause1_17:checked ~ .cs_description > .num17,
+.csslider1 > #cs_slide1_18:checked ~ .cs_description > .num18,
+.csslider1 > #cs_pause1_18:checked ~ .cs_description > .num18,
+.csslider1 > #cs_slide1_19:checked ~ .cs_description > .num19,
+.csslider1 > #cs_pause1_19:checked ~ .cs_description > .num19,
+.csslider1 > #cs_slide1_20:checked ~ .cs_description > .num20,
+.csslider1 > #cs_pause1_20:checked ~ .cs_description > .num20,
+.csslider1 > #cs_slide1_21:checked ~ .cs_description > .num21,
+.csslider1 > #cs_pause1_21:checked ~ .cs_description > .num21,
+.csslider1 > #cs_slide1_22:checked ~ .cs_description > .num22,
+.csslider1 > #cs_pause1_22:checked ~ .cs_description > .num22,
+.csslider1 > #cs_slide1_23:checked ~ .cs_description > .num23,
+.csslider1 > #cs_pause1_23:checked ~ .cs_description > .num23,
+.csslider1 > #cs_slide1_24:checked ~ .cs_description > .num24,
+.csslider1 > #cs_pause1_24:checked ~ .cs_description > .num24,
+.csslider1 > #cs_slide1_25:checked ~ .cs_description > .num25,
+.csslider1 > #cs_pause1_25:checked ~ .cs_description > .num25,
+.csslider1 > #cs_slide1_26:checked ~ .cs_description > .num26,
+.csslider1 > #cs_pause1_26:checked ~ .cs_description > .num26,
+.csslider1 > #cs_slide1_27:checked ~ .cs_description > .num27,
+.csslider1 > #cs_pause1_27:checked ~ .cs_description > .num27,
+.csslider1 > #cs_slide1_28:checked ~ .cs_description > .num28,
+.csslider1 > #cs_pause1_28:checked ~ .cs_description > .num28,
+.csslider1 > #cs_slide1_29:checked ~ .cs_description > .num29,
+.csslider1 > #cs_pause1_29:checked ~ .cs_description > .num29,
+.csslider1 > #cs_slide1_30:checked ~ .cs_description > .num30,
+.csslider1 > #cs_pause1_30:checked ~ .cs_description > .num30,
+.csslider1 > #cs_slide1_31:checked ~ .cs_description > .num31,
+.csslider1 > #cs_pause1_31:checked ~ .cs_description > .num31,
+.csslider1 > #cs_slide1_32:checked ~ .cs_description > .num32,
+.csslider1 > #cs_pause1_32:checked ~ .cs_description > .num32,
+.csslider1 > #cs_slide1_33:checked ~ .cs_description > .num33,
+.csslider1 > #cs_pause1_33:checked ~ .cs_description > .num33 {
+  opacity: 1;
+  z-index: 4;
+  -webkit-transition: .5s opacity .2s ease, .5s -webkit-transform .2s ease;
+  transition: .5s opacity .2s ease, .5s -webkit-transform .2s ease, .5s transform .2s ease;
+    
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.csslider1 > .slide:checked ~ .cs_description > label {
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+  
+
+}
+
+
+
+
+@-webkit-keyframes cs_description {
+  0.319693094629156%, 1.9720971867007673%  {
+    opacity: 1;
+    z-index: 4;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  0%, 2.3017902813299234%, 100%  {
+    opacity: 0;
+    z-index: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    
+  }
+}
+@keyframes cs_description {
+  0.319693094629156%, 1.9720971867007673%  {
+    opacity: 1;
+    z-index: 4;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  0%, 2.3017902813299234%, 100%  {
+    opacity: 0;
+    z-index: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    
+  }
+}
+
+
+.csslider1 > #cs_play1:checked ~ .cs_description > .num0 {
+  -webkit-animation: cs_description 156400ms infinite 0ms;
+  animation: cs_description 156400ms infinite 0ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num1 {
+  -webkit-animation: cs_description 156400ms infinite 4600ms;
+  animation: cs_description 156400ms infinite 4600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num2 {
+  -webkit-animation: cs_description 156400ms infinite 9200ms;
+  animation: cs_description 156400ms infinite 9200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num3 {
+  -webkit-animation: cs_description 156400ms infinite 13800ms;
+  animation: cs_description 156400ms infinite 13800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num4 {
+  -webkit-animation: cs_description 156400ms infinite 18400ms;
+  animation: cs_description 156400ms infinite 18400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num5 {
+  -webkit-animation: cs_description 156400ms infinite 23000ms;
+  animation: cs_description 156400ms infinite 23000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num6 {
+  -webkit-animation: cs_description 156400ms infinite 27600ms;
+  animation: cs_description 156400ms infinite 27600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num7 {
+  -webkit-animation: cs_description 156400ms infinite 32200ms;
+  animation: cs_description 156400ms infinite 32200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num8 {
+  -webkit-animation: cs_description 156400ms infinite 36800ms;
+  animation: cs_description 156400ms infinite 36800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num9 {
+  -webkit-animation: cs_description 156400ms infinite 41400ms;
+  animation: cs_description 156400ms infinite 41400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num10 {
+  -webkit-animation: cs_description 156400ms infinite 46000ms;
+  animation: cs_description 156400ms infinite 46000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num11 {
+  -webkit-animation: cs_description 156400ms infinite 50600ms;
+  animation: cs_description 156400ms infinite 50600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num12 {
+  -webkit-animation: cs_description 156400ms infinite 55200ms;
+  animation: cs_description 156400ms infinite 55200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num13 {
+  -webkit-animation: cs_description 156400ms infinite 59800ms;
+  animation: cs_description 156400ms infinite 59800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num14 {
+  -webkit-animation: cs_description 156400ms infinite 64400ms;
+  animation: cs_description 156400ms infinite 64400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num15 {
+  -webkit-animation: cs_description 156400ms infinite 69000ms;
+  animation: cs_description 156400ms infinite 69000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num16 {
+  -webkit-animation: cs_description 156400ms infinite 73600ms;
+  animation: cs_description 156400ms infinite 73600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num17 {
+  -webkit-animation: cs_description 156400ms infinite 78200ms;
+  animation: cs_description 156400ms infinite 78200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num18 {
+  -webkit-animation: cs_description 156400ms infinite 82800ms;
+  animation: cs_description 156400ms infinite 82800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num19 {
+  -webkit-animation: cs_description 156400ms infinite 87400ms;
+  animation: cs_description 156400ms infinite 87400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num20 {
+  -webkit-animation: cs_description 156400ms infinite 92000ms;
+  animation: cs_description 156400ms infinite 92000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num21 {
+  -webkit-animation: cs_description 156400ms infinite 96600ms;
+  animation: cs_description 156400ms infinite 96600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num22 {
+  -webkit-animation: cs_description 156400ms infinite 101200ms;
+  animation: cs_description 156400ms infinite 101200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num23 {
+  -webkit-animation: cs_description 156400ms infinite 105800ms;
+  animation: cs_description 156400ms infinite 105800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num24 {
+  -webkit-animation: cs_description 156400ms infinite 110400ms;
+  animation: cs_description 156400ms infinite 110400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num25 {
+  -webkit-animation: cs_description 156400ms infinite 115000ms;
+  animation: cs_description 156400ms infinite 115000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num26 {
+  -webkit-animation: cs_description 156400ms infinite 119600ms;
+  animation: cs_description 156400ms infinite 119600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num27 {
+  -webkit-animation: cs_description 156400ms infinite 124200ms;
+  animation: cs_description 156400ms infinite 124200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num28 {
+  -webkit-animation: cs_description 156400ms infinite 128800ms;
+  animation: cs_description 156400ms infinite 128800ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num29 {
+  -webkit-animation: cs_description 156400ms infinite 133400ms;
+  animation: cs_description 156400ms infinite 133400ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num30 {
+  -webkit-animation: cs_description 156400ms infinite 138000ms;
+  animation: cs_description 156400ms infinite 138000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num31 {
+  -webkit-animation: cs_description 156400ms infinite 142600ms;
+  animation: cs_description 156400ms infinite 142600ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num32 {
+  -webkit-animation: cs_description 156400ms infinite 147200ms;
+  animation: cs_description 156400ms infinite 147200ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_description > .num33 {
+  -webkit-animation: cs_description 156400ms infinite 151800ms;
+  animation: cs_description 156400ms infinite 151800ms;
+}
+
+
+
+
+.csslider1 > #cs_play1:checked ~ .cs_description > label > .cs_title,
+.csslider1 > #cs_play1:checked ~ .cs_description > label > .cs_descr,
+.csslider1 > .pause:checked ~ .cs_description > label > .cs_title,
+.csslider1 > .pause:checked ~ .cs_description > label > .cs_descr {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.csslider1 > .play:checked ~ .cs_description > label > .cs_title,
+.csslider1 > .play:checked ~ .cs_description > label > .cs_descr
+.csslider1 > .pause:checked ~ .cs_description > label > .cs_title,
+.csslider1 > .pause:checked ~ .cs_description > label > .cs_descr {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+
+/* ------------- /Template Description ------------- */
+/* hide description & bullets on mobile devices */
+@media
+only screen and (max-width: 480px),
+only screen and (-webkit-max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
+only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (                max-resolution: 192dpi) and (max-width: 480px),
+only screen and (                max-resolution: 2dppx)  and (max-width: 480px) { 
+  .csslider1 > .cs_description,
+  .csslider1 > .cs_bullets {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .csslider1,
+  .csslider1 > ul {
+    height: auto;
+  }
+}

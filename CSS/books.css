@@ -1,0 +1,28 @@
+.pic{
+    height: 212px;
+    width: 24%;
+    float: left;
+  margin: 2px;
+  margin-top: 40px;
+  border: 1px solid;
+}
+.sub{
+ font-size: 20px;
+ background: #ccccff;
+ margin-top: 5px;
+ border: 1px solid;
+ padding: 2px;
+ height: 20px;
+ text-decoration: none;
+ list-style: none;
+      
+}
+.left_menu ui{list-style: none;}
+
+.text_color{
+    text-decoration: none;
+}
+.img_Size{
+    height: 100%;
+    width: 100%;
+}

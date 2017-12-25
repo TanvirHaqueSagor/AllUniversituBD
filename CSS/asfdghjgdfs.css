@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 23, 2015, 12:51:36 AM
+    Author     : Guitorio
+*/
+
+*{margin: 0; padding: 0;}
+
+.exam_question{
+    margin: 0 auto;
+    height: 100px;
+    width: 600px;
+    background-color: #c6c1b8;
+}
+
+/*menu*/
+
+.nav{ background-color: #cccccc; min-height: 1100px;}
+.nav ul{margin: 0; padding: 0; list-style: none;}
+.nav ul li{ float: none; border-top: .5px solid; border-bottom: .5px solid;}
+.nav ul li a{ display: block; color: black; font-family: arial; text-decoration: none; padding: 15px;}
+.nav ul li a:hover{background: #1b5d46; color: white; transition: all .5s;}
+.nav ul li ul li{float: none; border-top: .5px solid; border-bottom: .5px solid;}
+.nav ul li ul li a{display: block; color: white; font-family: arial; text-decoration: none; padding: 5px;}
+.nav ul li ul li ul{}
+.nav ul li ul li ul li{}
+.nav ul li ul li ul li a{display: block; color: black;}
+.nav ul li ul li ul li a:hover{background: #847171;}
+
+
+/*dropdown*/
+
+.nav ul li ul{ display: none;}
+.nav ul li:hover ul{ display: block; transition: all .5s;}
+
+/*another dropdown*/
+
+.nav ul li ul li ul{display: none;}
+.nav ul li ul li:hover ul{ display: block;}

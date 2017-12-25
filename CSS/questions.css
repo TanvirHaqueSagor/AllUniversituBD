@@ -1,0 +1,186 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 21, 2015, 2:35:55 AM
+    Author     : Guitorio
+*/
+
+hr{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #231e1e;
+}
+
+.question_content{
+    margin: none;
+    width: 100%;
+    height: 1080px;
+    background-color: #ccccff;
+}
+.uni_name{
+    width: 98%;
+}
+.Unit_year{
+    float: left;
+    width: 60%;
+    font-size: 20px;
+    text-align: right;
+      height: 58px;
+}
+.mark{
+   float:left;
+   text-align: right;
+   margin-right: 10px;
+   width: 28%;
+    font-size: 20px;
+      height: 56px;
+}
+
+.question_wrapper{
+    margin-top: -5px;
+    height: 962px;
+    width: 100%;
+    background-color: #CCCCCC;
+    overflow: scroll;
+}
+
+.left_content{
+    margin: 0;
+    padding: 5px;
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.right_content{
+    margin: 0;
+    padding: 5px;
+    height: 100%;
+    width: 46%;
+    float: left;
+}
+
+pre{
+    font-family: arial;
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+}
+
+.question_span{
+    color: whitesmoke;
+}
+
+.solution ul{
+    list-style: none;
+}
+
+.solution li{
+    height: 30px;
+    width: 150px;
+    margin: 0;
+    background-color: #529a75;
+    border-radius: 2px;
+    border: .5px solid #231e1e;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 5px;
+    position: relative;
+    transition:  .5s;
+
+}
+
+
+.solution li ul li{
+    float:right; 
+    height:100px;
+    width:350px;
+    text-align:left;
+    padding-left:5px;
+    border:.5px solid;
+    margin-right: 200px;
+    overflow: hidden;
+}
+.solution a{
+    text-decoration:none; 
+    color:white;
+}
+
+.solution li ul{
+    position:absolute; 
+    margin-top: 5px;
+    visibility:hidden;
+}
+
+.solution li:hover ul{
+    visibility:visible;
+    float: right;
+}
+
+.solution li:hover{
+    background-color:#933;
+    transition:  .5s;
+
+}
+
+.nav{ background-color: #cccccc; min-height: 1100px;}
+.nav ul{margin: 0; padding: 0; list-style: none;}
+.nav ul li{ float: none; border-top: .5px solid; border-bottom: .5px solid;}
+.nav ul li a{text-align: center; display: block; color: black; font-family: arial; text-decoration: none; padding: 15px;}
+.nav ul li a:hover{background: #1b5d46; color: white; transition: all .5s;}
+.nav ul li ul{background: #578d8d;}
+.nav ul li ul li{float: none; border-top: .5px solid; border-bottom: .5px solid;}
+.nav ul li ul li a{display: block; color: white; font-family: arial; text-decoration: none; padding: 5px;}
+.nav ul li ul li ul{}
+.nav ul li ul li ul li{}
+.nav ul li ul li ul li a{display: block; color: black;}
+.nav ul li ul li ul li a:hover{background: #847171;}
+
+
+/*dropdown*/
+
+.nav ul li ul{ display: none;}
+.nav ul li:hover ul{ display: block; transition: all .5s;}
+
+/*another dropdown*/
+
+.nav ul li ul li ul{display: none;}
+.nav ul li ul li:hover ul{ display: block;}
+
+
+.Total_question{
+    width: 90%;
+    height: 180px;
+    padding-top:15px;
+    background:transparent;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 4%;
+}
+
+.Qac{
+    width: 45%;
+    height: 25%;
+    padding-left: 10px;
+    float: left;
+    font-size: 16px;
+    background: transparent;
+}
+.main_Question{
+    width: 100%;
+    height: 20%;
+    float: left;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.Solution_btn{
+    width: 100%;
+    height: 20%;
+}
+.Solution_btn ul{
+    float: left;
+    margin-right: 10px;
+}

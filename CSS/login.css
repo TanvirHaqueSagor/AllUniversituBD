@@ -1,0 +1,74 @@
+ 
+
+
+a { text-decoration: none; }
+
+h1 { font-size: 1em; }
+
+h1, p {
+margin-bottom: 10px;
+}
+
+strong {
+font-weight: bold;
+}
+
+.uppercase { text-transform: uppercase; }
+
+
+#login {
+margin: 10px auto;
+width: 300px;
+}
+
+.login_btn{
+    
+    width: 300px;
+}
+.log_out_btn{
+    width: 50%;
+    height: 30px;
+    background-color: #66ccff;
+}
+.login_text{
+    font-size: 18px;
+    text-align: top;
+    text-align: center;
+    
+}
+form fieldset input[type="text"], input[type="password"] {
+background-color: #e5e5e5;
+border: none;
+border-radius: 3px;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 14px;
+height: 50px;
+outline: none;
+padding-left:20px;
+width: 280px;
+}
+
+
+form fieldset input[type="submit"] {
+background-color: #008dde;
+border: none;
+border-radius: 3px;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+height: 50px;
+text-transform: uppercase;
+width: 280px;
+}
+
+form fieldset a {
+color: #5a5656;
+font-size: 10px;
+}
+
+form fieldset a:hover { text-decoration: underline; }
+
+
+
+ 

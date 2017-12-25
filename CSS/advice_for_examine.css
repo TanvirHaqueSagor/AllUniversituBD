@@ -1,0 +1,65 @@
+.name_logo_wraper{
+    height: 150px;
+    width:100%;
+   margin-bottom: 10px;
+   margin-top: 15px;   
+}
+.sir_name{
+    font-size: 20px;
+    padding: 20px;
+   color: #000;
+   padding-teft: 30px;
+    
+}
+.teachet_pic{
+    height: 150px;
+    width: 150px;
+    float: left;
+    
+}
+
+.teachet_pic a{
+    margin-left: 10px;
+    height: 100%;
+    width: 100%;
+}
+.name_detels{
+    
+    height: 150px;
+    width: 900px;
+    float: left;
+    
+}
+
+.speach{
+    margin: 0 auto;
+    height: 825px;
+    width: 100%;
+    overflow: scroll;
+    background-color: #a3b4ca;
+}
+
+.span_speach{
+    font-family: arial;
+    font-size: 20px;
+    color: #55585d;
+
+    
+}
+
+.span_speach p{
+    text-align:  justify;
+    padding: 10px;
+    font-size: 18px;
+}
+.advice_marque{
+    height: 100px;
+    width: 1100px;
+    background: #cccccc;
+    //background: #E0DEDE;
+    
+}
+.advice_marque:hover{
+      background: #E0DEDE;
+      transition: 5s;
+}
